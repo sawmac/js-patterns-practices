@@ -22,10 +22,11 @@ var myFunc = function memoizer(param) {
 myFunc.cache={};
 myFunc('node1');
 console.log(myFunc.cache.node1);
-myFunc('node1');
+myFunc('node1'); // won't rerun the expensive process its in teh cache nows
 console.log(myFunc.cache.node1);
 myFunc('node2');
 console.log(myFunc.cache.node2);
-myFunc('node2');
+myFunc('node2'); //won't rerun expesnive process its in the cache now
 console.log(myFunc.cache.node2);
 console.log(myFunc.cache);
+
